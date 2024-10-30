@@ -1,15 +1,20 @@
 name: Build and deploy
 
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
-# 重複実行された時に、前回のビルドをキャンセルしてくれる
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# workflowの実行が重複した時、最新以外をキャンセルするかどうか（nextjs workflowのサンプルにしたがって、一旦falseに）
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -22,12 +27,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20.x"
+          cache: "npm"
 
-      - name: Cache node_modules
+      - name: Cache and restore cache
         uses: actions/cache@v4
         with:
-          path: ~/.npm
-          key: cache-npm-${{ hashFiles('package-lock.json') }}
+          path: .next/cache
+          key: nextjs-${{ hashFiles('package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: nextjs-${{ hashFiles('package-lock.json') }}-
 
       - name: Run npm ci
         shell: bash
@@ -38,10 +45,9 @@ jobs:
         run: npm run build
 
       - name: Upload files as artifact
-        id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: out/
+          path: ./out
 
   deploy:
     # ここで指定したurlはworkflowが完了したあとにGitHubダッシュボード上で表示される（クリックでそのURLが開かれるだけの機能）
