@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   openGraph: {
     title: "Privacy Policy",
-    images: "https://ideable.ai/og.png",
+    images: "https://ideable.ai/og-image.png",
   },
 };
 

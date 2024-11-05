@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       default: "ideable",
       template: "%s | ideable",
     },
-    images: "https://ideable.ai/og.png",
+    images: "https://ideable.ai/og-image.png",
   },
   twitter: {
     card: "summary_large_image",

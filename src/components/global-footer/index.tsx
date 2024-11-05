@@ -18,8 +18,7 @@ export default function GlobalFooter() {
       >
         〒141-0021
         <br />
-        東京都品川区上大崎4丁目5-28
-        <br className="mobile-only" />
+        東京都品川区上大崎4丁目5-28 <br className="mobile-only" />
         MEGUROHAUS 601
       </a>
 
@@ -58,7 +57,7 @@ export default function GlobalFooter() {
 
       <section className={styles.copyright}>
         <SvgIdeable />
-        <p>2020 // tacto inc. all rights reserved.</p>
+        <p>2024 // tacto Inc. all rights reserved.</p>
       </section>
     </footer>
   );

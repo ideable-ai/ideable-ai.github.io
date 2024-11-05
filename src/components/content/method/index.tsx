@@ -70,7 +70,7 @@ export default function ContentMethod() {
       <p className={styles.text}>
         あらかじめ「逆転」の発想プロンプトを組み込んだChatGPTで、３分でコーヒーの新商品企画を生成するデモ動画。
         <br />
-        発想のロジックを具体的に指示することで、AIのアウトプット品質は大幅に高めることが出来ます。
+        発想のロジックを具体的に指示することで、AIのアウトプット品質は大幅に高めることができます。
       </p>
 
       <HeadingLv3>Outcome</HeadingLv3>
@@ -87,7 +87,7 @@ export default function ContentMethod() {
       <p className={styles.text}>
         生成されたコーヒーの新商品企画サンプル。逆転のロジックに基づくことで、コーヒーは「活力を高める」という一般常識に対して
         <br />
-        「瞑想やリラックスに用いる」という新しい切り口を素早く生み出すことが出来ました。
+        「瞑想やリラックスに用いる」という新しい切り口を素早く生み出すことができました。
       </p>
 
       <HeadingLv3>Framework</HeadingLv3>

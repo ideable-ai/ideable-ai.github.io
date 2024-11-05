@@ -63,10 +63,10 @@ export default function ContentMethod() {
         <picture>
           <source
             media="(min-width: 900px)"
-            srcSet="/images/about/fig_01_desktop.png"
+            srcSet="/images/about/fig_01_desktop.avif"
           />
           <img
-            src="/images/about/fig_01_mobile.png"
+            src="/images/about/fig_01_mobile.avif"
             width="1067"
             height="600"
             alt=""
@@ -80,10 +80,10 @@ export default function ContentMethod() {
         <picture>
           <source
             media="(min-width: 900px)"
-            srcSet="/images/about/fig_02_desktop.png"
+            srcSet="/images/about/fig_02_desktop.avif"
           />
           <img
-            src="/images/about/fig_02_mobile.png"
+            src="/images/about/fig_02_mobile.avif"
             width="1067"
             height="600"
             alt=""
