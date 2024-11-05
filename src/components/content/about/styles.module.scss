@@ -1,0 +1,79 @@
+.text {
+  font-size: 30px;
+  line-height: 1.78;
+  letter-spacing: 0.09em;
+
+  @include mixin.desktop {
+    font-size: 54px;
+    line-height: 1.8;
+  }
+
+  > span {
+    @include mixin.desktop {
+      background: #fff;
+      border-radius: 100px;
+      padding: 8px 30px 14px;
+    }
+  }
+
+  > span span {
+    padding: 4px 17px 7px;
+    border-radius: 100px;
+    background: #fff;
+
+    @include mixin.desktop {
+      padding: 0;
+      background: transparent;
+    }
+  }
+
+  > span br {
+    @include mixin.desktop {
+      display: none;
+    }
+  }
+}
+
+.text.small {
+  margin: 30px 0;
+  font-size: 15px;
+  line-height: 2.7;
+
+  @include mixin.desktop {
+    margin: 30px 0 60px;
+    font-size: 24px;
+    line-height: 2.4;
+  }
+
+  > span {
+    @include mixin.desktop {
+      padding: 10px 30px 13px;
+    }
+  }
+
+  > span span {
+    padding: 8px 17px 11px;
+    white-space: nowrap;
+
+    @include mixin.desktop {
+      padding: 0;
+    }
+  }
+}
+
+.rounded {
+  margin-top: 15px;
+  border-radius: 45px;
+  overflow: hidden;
+  border: 3px solid #000;
+
+  video,
+  img {
+    width: 100%;
+  }
+
+  @include mixin.desktop {
+    margin-top: 30px;
+    border-radius: 90px;
+  }
+}

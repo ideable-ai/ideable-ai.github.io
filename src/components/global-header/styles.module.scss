@@ -1,0 +1,222 @@
+.wrapper {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  z-index: 1;
+
+  @include mixin.desktop {
+    padding: 30px 30px 0;
+  }
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  width: 52px;
+
+  @include mixin.desktop {
+    width: 80px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.menu_button {
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #000;
+  border-radius: 50%;
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    position: absolute;
+    height: 3px;
+    width: 24px;
+    background: #000;
+  }
+
+  span:nth-child(1) {
+    transform: translateY(-4px);
+  }
+
+  span:nth-child(2) {
+    transform: translateY(4px);
+  }
+
+  @include mixin.desktop {
+    display: none;
+  }
+
+  &:global(.is-open) {
+    span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f2f1ed;
+  width: 100%;
+  height: 100dvh;
+
+  overscroll-behavior: contain;
+  overflow-y: auto;
+
+  display: none;
+
+  &:global(.is-open) {
+    display: block;
+  }
+
+  @include mixin.desktop {
+    display: block;
+    width: auto;
+    height: auto;
+    background: transparent;
+  }
+
+  :global(.inner) {
+    height: calc(100% + 1px);
+    min-height: 640px;
+    display: grid;
+    align-content: end;
+    padding: 0 15px 30px;
+
+    @include mixin.desktop {
+      padding: 30px 30px 0;
+      display: flex;
+      min-height: 0;
+    }
+  }
+
+  a:nth-child(1) {
+    background: #fc6600;
+    width: 210px;
+
+    @include mixin.desktop {
+      background: #fff;
+      width: 120px;
+    }
+  }
+
+  a:nth-child(2) {
+    background: #009fba;
+    width: 240px;
+
+    @include mixin.desktop {
+      background: #fff;
+      width: 120px;
+    }
+  }
+
+  a:nth-child(3) {
+    background: #c3b4ff;
+    width: 300px;
+
+    @include mixin.desktop {
+      background: #fff;
+      width: 120px;
+    }
+  }
+
+  a:nth-child(4) {
+    background: #00695a;
+    width: 180px;
+
+    @include mixin.desktop {
+      background: #fff;
+      width: 120px;
+    }
+  }
+
+  a:nth-child(5) {
+    background: #ff7ee1;
+    width: 270px;
+
+    @include mixin.desktop {
+      background: #fff;
+      width: 120px;
+    }
+  }
+
+  a:nth-child(6) {
+    background: #ae8700;
+    width: 210px;
+
+    @include mixin.desktop {
+      background: #fff;
+      width: 120px;
+    }
+  }
+
+  // contact
+  a:nth-child(7) {
+    background: #000;
+    margin-top: 15px;
+    width: 300px;
+    color: #fff;
+
+    @include mixin.desktop {
+      margin-top: 0;
+      margin-left: 12px;
+      width: 138px;
+    }
+  }
+
+  a {
+    @include mixin.font-jost;
+    font-weight: 600;
+    height: 72px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 36px;
+    padding: 0 36px;
+    font-size: 24px;
+    letter-spacing: 0.09em;
+
+    @include mixin.desktop {
+      height: 48px;
+      padding: 0;
+      justify-content: center;
+      font-size: 13px;
+      border: 2px solid #000;
+      color: #000;
+      margin-left: -18px;
+    }
+
+    &:hover {
+      background-color: var(--random-color);
+      color: #fff;
+      border-color: var(--random-color);
+    }
+  }
+
+  svg {
+    margin-left: 8px;
+
+    @include mixin.desktop {
+      margin-left: 4px;
+      width: 12px;
+    }
+  }
+}

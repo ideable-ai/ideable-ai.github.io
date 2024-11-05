@@ -1,0 +1,151 @@
+.updates {
+  font-size: 18px;
+  letter-spacing: 0.09em;
+  line-height: calc(30 / 18);
+
+  @include mixin.desktop {
+    font-size: 24px;
+    line-height: calc(36 / 24);
+  }
+
+  a {
+    display: block;
+    background: #fff;
+    border-radius: 45px;
+    padding: 40px 30px 30px;
+    border: 3px solid #000;
+
+    @include mixin.desktop {
+      display: grid;
+      grid-template-columns: 145px 1fr 48px;
+      column-gap: 30px;
+      padding: 40px 60px;
+      border-radius: 999px;
+    }
+
+    &:hover {
+      background-color: var(--random-color);
+      border-color: var(--random-color);
+      color: #fff;
+    }
+  }
+
+  a + a {
+    margin-top: -3px;
+  }
+
+  time {
+    @include mixin.font-jost;
+  }
+
+  p {
+    margin: 15px 0 25px;
+    @include mixin.line-clamp(3);
+
+    @include mixin.desktop {
+      @include mixin.line-clamp(2);
+
+      margin: -0.1em 0 0; // NOTE: 日付のフォントとタイトルのフォントが違うことで、若干vertical-alighがずれて見えるので、negativeマージンで微調整
+    }
+  }
+
+  svg {
+    width: 48px;
+
+    @include mixin.desktop {
+      align-self: center;
+    }
+  }
+}
+
+.read_more {
+  position: relative;
+  display: block;
+  margin-top: 30px;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  border: 3px solid #000;
+  margin-inline: auto;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 42px;
+    height: 3px;
+    background: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &:hover {
+    background-color: var(--random-color);
+    border-color: var(--random-color);
+
+    &::before,
+    &::after {
+      background: #fff;
+    }
+  }
+
+  &:disabled {
+    display: none;
+  }
+}
+
+.mission {
+  margin-top: 120px;
+
+  // @include mixin.desktop {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: flex-end;
+  // }
+
+  h3 {
+    font-size: 42px;
+    line-height: calc(54 / 42);
+    margin-top: -16px;
+
+    @include mixin.desktop {
+      font-size: 54px;
+      line-height: calc(78 / 54);
+      letter-spacing: 0.09em;
+      margin-top: -10px;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    line-height: calc(30 / 15);
+    margin-top: 12px;
+
+    @include mixin.desktop {
+      line-height: calc(36 / 15);
+      letter-spacing: 0.09em;
+      margin-top: 18px;
+    }
+
+    a {
+      font-size: 12px;
+    }
+  }
+
+  // img {
+  //   margin-top: 20px;
+
+  //   @include mixin.desktop {
+  //     width: 450px;
+  //     margin-top: 0;
+  //     // height: auto;
+  //   }
+  // }
+}

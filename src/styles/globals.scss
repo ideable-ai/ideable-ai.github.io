@@ -1,0 +1,71 @@
+html {
+  scroll-behavior: smooth;
+  visibility: hidden;
+
+  &[data-init="true"] {
+    visibility: visible;
+  }
+}
+
+body {
+  background: #f2f1ed;
+  font-feature-settings: "palt";
+
+  font-family: var(--font-noto-sans-jp), sans-serif;
+  font-weight: 500;
+}
+
+main {
+  zoom: var(--scale-mobile);
+
+  @include mixin.desktop {
+    zoom: var(--scale-desktop);
+  }
+}
+
+img,
+svg,
+video,
+iframe {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: #fff;
+  background-color: var(--random-color);
+}
+
+//
+.desktop-only {
+  display: none;
+
+  @include mixin.desktop {
+    display: block;
+  }
+}
+
+.mobile-only {
+  @include mixin.desktop {
+    display: none;
+  }
+}
+
+// $sizes: 60, 90;
+
+// @each $size in $sizes {
+//   .mt-#{$size} {
+//     margin-top: #{$size}px;
+//   }
+
+//   .mt-desktop-#{$size} {
+//     @include mixin.desktop {
+//       margin-top: #{$size}px;
+//     }
+//   }
+// }

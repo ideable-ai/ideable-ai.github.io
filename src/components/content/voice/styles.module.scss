@@ -1,0 +1,165 @@
+.data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  @include mixin.desktop {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  section {
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid #000;
+    overflow: hidden;
+    background: #fff;
+    display: grid;
+    align-content: center;
+    text-align: center;
+    font-size: 30px;
+    line-height: calc(42 / 30);
+    letter-spacing: 0.09em;
+    aspect-ratio: 1/1;
+
+    @include mixin.desktop {
+      width: 360px;
+      height: 360px;
+    }
+  }
+
+  :global(.percentage) {
+    border: 0;
+    background: transparent;
+  }
+
+  :global(.meter) {
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      border: 45px solid #fff;
+      border-radius: 50%;
+    }
+  }
+
+  :global(.percent) {
+    @include mixin.font-jost;
+    font-size: 90px;
+    line-height: 0.8;
+
+    span {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  :global(.note) {
+    font-size: 12px;
+    letter-spacing: 0.09em;
+  }
+}
+
+.reviews {
+  display: grid;
+  row-gap: 15px;
+
+  @include mixin.desktop {
+    row-gap: 30px;
+  }
+
+  section {
+    font-size: 18px;
+    letter-spacing: 0.09em;
+    line-height: calc(30 / 18);
+    color: #fff;
+    padding: calc(40px - 6px) 60px;
+
+    @include mixin.desktop {
+      width: 930px;
+      line-height: calc(48 / 30);
+      font-size: 30px;
+      padding: calc(55px - 12px) 78px;
+    }
+  }
+
+  section:nth-child(1) {
+    background: #fc6600;
+  }
+
+  section:nth-child(2) {
+    background: #8aa4ad;
+  }
+
+  section:nth-child(3) {
+    background: #009fba;
+  }
+
+  section:nth-child(odd) {
+    border-radius: 90px 90px 90px 0;
+  }
+
+  section:nth-child(even) {
+    border-radius: 90px 90px 0 90px;
+
+    @include mixin.desktop {
+      justify-self: end;
+    }
+  }
+
+  br {
+    @include mixin.desktop {
+      display: none;
+    }
+  }
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 14px;
+  column-gap: 14px;
+
+  @include mixin.desktop {
+    grid-template-columns: repeat(6, 210px);
+    justify-content: space-between;
+  }
+
+  div {
+    height: 70px;
+    display: grid;
+    place-items: center;
+
+    @include mixin.desktop {
+      height: 110px;
+    }
+  }
+
+  img {
+    width: 100px;
+
+    @include mixin.desktop {
+      width: 150px;
+    }
+  }
+
+  img[src$="keio-spring.png"] {
+    width: 100px;
+
+    @include mixin.desktop {
+      width: 135px;
+    }
+  }
+}

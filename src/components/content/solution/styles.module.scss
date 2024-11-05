@@ -1,0 +1,374 @@
+.tab_buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  button {
+    height: 72px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    font-size: 15px;
+    background: #fff;
+    border: 3px solid #000;
+
+    &:global(.is-active),
+    &:hover {
+      color: #fff;
+      border: none;
+    }
+
+    &:global(.workshop.is-active),
+    &:global(.workshop:hover) {
+      background: #f64b4b;
+    }
+
+    &:global(.support.is-active),
+    &:global(.support:hover) {
+      background: #009fba;
+    }
+
+    @include mixin.desktop {
+      height: 90px;
+      font-size: 24px;
+    }
+  }
+}
+
+.tab_content {
+  animation: fadeIn 0.5s both;
+  margin-top: 54px;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @include mixin.desktop {
+    margin-top: 90px;
+  }
+}
+
+.tab_content_description {
+  @include mixin.desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  section {
+    @include mixin.desktop {
+      width: 420px;
+    }
+  }
+
+  img {
+    margin-top: 30px;
+
+    @include mixin.desktop {
+      margin-top: 0;
+      width: 690px;
+    }
+  }
+
+  h3 {
+    font-size: 48px;
+    line-height: calc(54 / 48);
+    letter-spacing: 0.09em;
+  }
+}
+
+.tab_content_p {
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  @include mixin.mt-lh(30px);
+
+  @include mixin.desktop {
+    @include mixin.mt-lh(45px);
+    letter-spacing: 0.09em;
+  }
+
+  // 見出しレベル3の下マージンが他と違って狭いので、pの上マージンをネガティブにすることで例外対応
+  &:global(.closer) {
+    margin-top: -14px;
+
+    @include mixin.desktop {
+      margin-top: -30px;
+    }
+  }
+}
+
+.workshop_case_studies {
+  margin-top: 24px;
+  color: #fff;
+  display: grid;
+
+  @include mixin.desktop {
+    margin-top: 60px;
+    row-gap: 30px;
+  }
+
+  section {
+    position: relative;
+    padding: 26px 45px 120px;
+    border-radius: 9999px;
+
+    @include mixin.desktop {
+      display: flex;
+      padding: 0;
+    }
+
+    &:nth-child(1) {
+      background: #ff7ee1;
+
+      @include mixin.desktop {
+        background: transparent;
+      }
+
+      :global(.num),
+      :global(.body) {
+        @include mixin.desktop {
+          background: #ff7ee1;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      background: #009fba;
+
+      @include mixin.desktop {
+        background: transparent;
+      }
+
+      :global(.num),
+      :global(.body) {
+        @include mixin.desktop {
+          background: #009fba;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      background: #ae8700;
+
+      @include mixin.desktop {
+        background: transparent;
+      }
+
+      :global(.num),
+      :global(.body) {
+        @include mixin.desktop {
+          background: #ae8700;
+        }
+      }
+    }
+  }
+
+  :global(.num) {
+    @include mixin.font-jost;
+    font-size: 72px;
+    text-align: center;
+    line-height: 1;
+
+    @include mixin.desktop {
+      border-radius: 50%;
+      width: 270px;
+      height: 270px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  :global(.body) {
+    @include mixin.desktop {
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 120px;
+      width: 100%;
+    }
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: calc(36 / 24);
+    letter-spacing: 0.03em;
+
+    @include mixin.desktop {
+      margin-top: 0;
+      font-size: 30px;
+      line-height: calc(42 / 30);
+    }
+  }
+
+  :global(.desc) {
+    @include mixin.desktop {
+      flex-shrink: 0;
+      width: 435px;
+    }
+  }
+
+  :global(.desc) p {
+    @include mixin.mt-lh(20px);
+    font-size: 12px;
+    line-height: calc(24 / 12);
+    letter-spacing: 0.09em;
+
+    @include mixin.desktop {
+      @include mixin.mt-lh(30px);
+      font-size: 15px;
+    }
+  }
+
+  :global(.details) {
+    margin-top: 20px;
+    padding-top: 26px;
+    border-top: 3px dotted #fff;
+
+    @include mixin.desktop {
+      border-left: 3px dotted #fff;
+      border-top: 0;
+      margin: 0;
+      padding-top: 0;
+      padding-left: 15px;
+      display: grid;
+      align-content: center;
+    }
+  }
+
+  h4 {
+    @include mixin.font-jost;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  :global(.details) p {
+    @include mixin.mt-lh(24px);
+    font-size: 12px;
+    line-height: calc(24 / 12);
+    letter-spacing: 0.09em;
+
+    @include mixin.desktop {
+      // NOTE:
+      // safariではzoomによってfont-sizeが9px以下になると、それ以降は小さくならない。
+      // このためここだけzoomを1に補正し、vwで対応する
+      zoom: calc(1 / var(--scale-desktop));
+      font-size: calc(100vw / 1440 * 12);
+    }
+  }
+}
+
+.support_case_studies {
+  margin-top: 24px;
+  display: grid;
+  row-gap: 15px;
+
+  @include mixin.desktop {
+    margin-top: 60px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  section {
+    cursor: pointer;
+    border: 3px solid #000;
+    border-radius: 45px;
+    padding: 45px 45px 35px;
+    background: #fff;
+
+    @include mixin.desktop {
+      position: relative;
+      border-radius: 90px;
+      padding: 60px 60px 90px;
+    }
+
+    &:nth-child(1) {
+      :global(.num) {
+        color: #c3b4ff;
+      }
+
+      &:hover {
+        border-color: #c3b4ff;
+        color: #fff;
+        background: #c3b4ff;
+      }
+    }
+
+    &:nth-child(2) {
+      :global(.num) {
+        color: #ff7ee1;
+      }
+
+      &:hover {
+        border-color: #ff7ee1;
+        color: #fff;
+        background: #ff7ee1;
+      }
+    }
+
+    &:hover {
+      :global(.num) {
+        color: #fff;
+      }
+    }
+  }
+
+  :global(.num) {
+    @include mixin.font-jost;
+    font-size: 72px;
+    line-height: 0.7;
+  }
+
+  h2 {
+    @include mixin.mt-lh(30px);
+    font-size: 24px;
+    line-height: calc(36 / 24);
+    letter-spacing: 0.03em;
+
+    // 3行で省略
+    @include mixin.line-clamp(3);
+
+    @include mixin.desktop {
+      font-size: 36px;
+      line-height: calc(48 / 36);
+    }
+  }
+
+  p {
+    @include mixin.mt-lh(24px);
+    font-size: 12px;
+    line-height: calc(24 / 12);
+    letter-spacing: 0.09em;
+
+    @include mixin.desktop {
+      font-size: 15px;
+    }
+  }
+
+  svg {
+    width: 54px;
+    margin-top: 20px;
+
+    @include mixin.desktop {
+      position: absolute;
+      right: 60px;
+      bottom: 60px;
+      width: 48px;
+      margin-top: 0;
+    }
+  }
+}
+
+.download {
+  margin-top: 60px;
+
+  @include mixin.desktop {
+    margin-top: 90px;
+  }
+}

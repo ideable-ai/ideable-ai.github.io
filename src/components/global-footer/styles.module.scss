@@ -1,0 +1,67 @@
+.wrapper {
+  color: #fff;
+  background: #000;
+  margin-top: 120px;
+  border-radius: 45px 45px 0 0;
+  padding: 120px 45px 45px;
+
+  font-size: 12px;
+
+  @include mixin.desktop {
+    margin-top: 180px;
+    border-radius: 90px 90px 0 0;
+    padding: 120px 60px 60px;
+  }
+}
+
+.address {
+  display: inline-block;
+  margin-top: 24px;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+
+.links {
+  @include mixin.font-jost;
+  display: grid;
+  row-gap: 24px;
+  letter-spacing: 0.1em;
+  margin-top: 24px;
+
+  @include mixin.desktop {
+    grid-auto-flow: column;
+    justify-content: start;
+    column-gap: 30px;
+  }
+}
+
+.sns {
+  display: flex;
+
+  li + li::before {
+    content: "/";
+    margin: 0 6px;
+  }
+}
+
+.copyright {
+  margin-top: 60px;
+
+  @include mixin.desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  svg {
+    @include mixin.desktop {
+      width: 358px;
+    }
+  }
+
+  p {
+    @include mixin.font-jost;
+    margin-top: 30px;
+    letter-spacing: 0.1em;
+  }
+}

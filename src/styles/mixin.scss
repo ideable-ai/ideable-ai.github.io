@@ -1,0 +1,25 @@
+@mixin desktop {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+// @mixin vw-size($size, $property: "font-size", $base: 390) {
+//   #{$property}: calc($size / $base * 100vw);
+// }
+
+@mixin font-jost {
+  font-family: var(--font-jost), sans-serif;
+}
+
+// line-heightによって余計に開くマージンを消すmixin
+@mixin mt-lh($size, $prop: "margin-top") {
+  #{$prop}: calc(#{$size} - (1lh - 1em) / 2);
+}
+
+@mixin line-clamp($size: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: $size;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

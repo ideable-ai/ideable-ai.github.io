@@ -1,5 +1,5 @@
 {
-  "name": "ideable-landing-page",
+  "name": "ideable",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028",
-    "next": "15.0.2"
+    "@uidotdev/usehooks": "^2.4.1",
+    "@vimeo/player": "^2.24.0",
+    "embla-carousel-react": "^8.3.0",
+    "lottie-react": "^2.4.0",
+    "next": "14.2.15",
+    "react": "^18",
+    "react-dom": "^18",
+    "the-new-css-reset": "^1.11.3",
+    "zustand": "^5.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/vimeo__player": "^2.18.3",
+    "@types/youtube": "^0.1.0",
     "eslint": "^8",
-    "eslint-config-next": "15.0.2"
+    "eslint-config-next": "14.2.15",
+    "sass": "^1.79.5",
+    "typescript": "^5"
   }
 }

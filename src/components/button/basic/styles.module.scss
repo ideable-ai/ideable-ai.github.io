@@ -1,0 +1,64 @@
+.button {
+  display: flex;
+  width: 100%;
+  color: #fff;
+  background: #000;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  letter-spacing: 0.09em;
+
+  &:hover {
+    background-color: var(--random-color);
+  }
+
+  &:global(.is-height-hero) {
+    height: 72px;
+
+    @include mixin.desktop {
+      height: 60px;
+      font-size: 15px;
+    }
+  }
+
+  &:global(.is-height-s) {
+    height: 72px;
+
+    @include mixin.desktop {
+      height: 90px;
+    }
+  }
+
+  &:global(.is-height-m) {
+    height: 90px;
+
+    @include mixin.desktop {
+      height: 180px;
+      font-size: 24px;
+    }
+  }
+
+  &:global(.is-height-l) {
+    height: 120px;
+    font-size: 36px;
+
+    @include mixin.desktop {
+      height: 270px;
+    }
+  }
+
+  &:global(.is-width-m) {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  &:global(.is-width-l) {
+    max-width: 990px;
+    margin-inline: auto;
+  }
+
+  &:global(.is-font-jost) {
+    @include mixin.font-jost;
+  }
+}

@@ -1,0 +1,188 @@
+.expanded {
+  position: relative;
+  left: -15px;
+  width: calc(100% + 15px + 15px);
+
+  @include mixin.desktop {
+    left: -135px;
+    width: calc(100% + 135px + 135px);
+  }
+}
+
+.video {
+  position: relative;
+  aspect-ratio: 16/9;
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.video_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/images/method/fig_video-poster.avif) no-repeat center/cover;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  &:hover {
+    div {
+      background: var(--random-color);
+      border-color: var(--random-color);
+
+      &::before {
+        background: #fff;
+      }
+    }
+  }
+
+  div {
+    border: 3px solid #000;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+    @include mixin.desktop {
+      width: 180px;
+      height: 180px;
+    }
+
+    &::before {
+      content: "";
+      width: 18px;
+      height: 16px;
+      background: #000;
+      clip-path: polygon(0 0, 100% 50%, 100% 50%, 0 100%);
+      transform: translateX(2px);
+
+      @include mixin.desktop {
+        width: 36px;
+        height: 30px;
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.text {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  @include mixin.mt-lh(24px);
+
+  @include mixin.desktop {
+    font-size: 15px;
+    @include mixin.mt-lh(30px);
+  }
+
+  &:last-of-type {
+    @include mixin.mt-lh(60px, "margin-bottom");
+
+    @include mixin.desktop {
+      @include mixin.mt-lh(90px, "margin-bottom");
+    }
+  }
+}
+
+.rounded {
+  border-radius: 45px;
+  overflow: hidden;
+  transition: border-radius 0.3s;
+  border: 3px solid #000;
+
+  @include mixin.desktop {
+    border-radius: 90px;
+  }
+
+  &:global(.disabled) {
+    border-radius: 0;
+  }
+}
+
+.embla {
+  position: relative;
+  overflow: hidden;
+}
+
+.embla_container {
+  display: flex;
+  column-gap: 6px;
+
+  @include mixin.desktop {
+    column-gap: 30px;
+  }
+}
+
+.embla_slide {
+  flex: 0 0 360px;
+  min-width: 0;
+
+  @include mixin.desktop {
+    flex: 0 0 1170px;
+  }
+}
+
+.embla_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 3px solid #000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+
+  @include mixin.desktop {
+    width: 180px;
+    height: 180px;
+  }
+
+  &:hover {
+    background-color: var(--random-color);
+    border-color: var(--random-color);
+    color: #fff;
+  }
+
+  svg {
+    width: 36px;
+
+    @include mixin.desktop {
+      width: 60px;
+    }
+  }
+
+  &:global(.prev) {
+    left: 0;
+
+    @include mixin.desktop {
+      left: 30px;
+    }
+
+    svg {
+      transform: scale(-1);
+    }
+  }
+
+  &:global(.next) {
+    right: 0;
+
+    @include mixin.desktop {
+      right: 30px;
+    }
+  }
+
+  &:disabled {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

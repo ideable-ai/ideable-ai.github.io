@@ -1,1 +1,3 @@
-ideable landing page
+ideable website
+
+https://ideable.ai

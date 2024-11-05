@@ -1,0 +1,60 @@
+.wrapper {
+  display: grid;
+
+  @include mixin.desktop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  // Safari, Mobile Safariのみ適用
+  // NOTE: 上記ブラウザではcss zoomとvhなどのviewrpot-unitsの相性が悪いため
+  // @supports (hanging-punctuation: first) and (font: -apple-system-body) and
+  //   (-webkit-appearance: none) {
+  //   min-height: 100svh;
+
+  //   @include mixin.desktop {
+  //     min-height: 0;
+  //   }
+  // }
+}
+
+.visual {
+  order: 1;
+
+  @include mixin.desktop {
+    order: 2;
+  }
+}
+
+.message {
+  order: 2;
+
+  display: grid;
+  padding: 45px 15px 0;
+
+  @include mixin.desktop {
+    order: 1;
+
+    align-content: center;
+    justify-content: center;
+    padding: 60px 0 0;
+  }
+
+  img {
+    width: 238px;
+    margin: 0 30px;
+
+    @include mixin.desktop {
+      width: 300px;
+      margin: 0;
+    }
+  }
+}
+
+.button {
+  margin-top: 45px;
+
+  @include mixin.desktop {
+    margin-top: 45px;
+    width: 240px;
+  }
+}
