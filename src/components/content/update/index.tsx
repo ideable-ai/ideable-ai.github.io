@@ -6,19 +6,24 @@ import { useRandomColor } from "@/stores/random-color";
 import HeadingLv2 from "@/components/heading/lv2";
 import HeadingLv3 from "@/components/heading/lv3";
 import SvgArrow from "@/components/svg/arrow";
-import updatesJson from "@/data/updates.json";
 import styles from "./styles.module.scss";
 
-export default function ContentUpdate() {
+export interface Props {
+  updatesData: {
+    date: string;
+    title: string;
+    url?: string;
+  }[];
+}
+
+export default function ContentUpdate({ updatesData }: Props) {
   const APPEND_AT_ONCE = 10;
   const changeColor = useRandomColor((state) => state.changeColor);
 
-  const [updates, setUpdates] = useState<typeof updatesJson>(
-    updatesJson.slice(0, 3)
-  );
+  const [updates, setUpdates] = useState(updatesData.slice(0, 3));
   const readMore = () => {
     const nextLength = updates.length + APPEND_AT_ONCE;
-    setUpdates(updatesJson.slice(0, nextLength));
+    setUpdates(updatesData.slice(0, nextLength));
   };
 
   return (
@@ -35,7 +40,7 @@ export default function ContentUpdate() {
           >
             <time>{item.date}</time>
             <p>{item.title}</p>
-            <SvgArrow />
+            {item.url && <SvgArrow />}
           </a>
         ))}
       </div>
@@ -43,7 +48,7 @@ export default function ContentUpdate() {
       <button
         className={styles.read_more}
         onClick={readMore}
-        disabled={updatesJson.length <= updates.length}
+        disabled={updatesData.length <= updates.length}
         onMouseLeave={changeColor}
       ></button>
 
