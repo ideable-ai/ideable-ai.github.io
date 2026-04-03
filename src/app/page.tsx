@@ -42,7 +42,7 @@ export default function Home() {
       </SectionContainer>
 
       <SectionContainer>
-        <a href="https://forms.gle/7MxHsRn53g18HVuo6" target="_blank">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf24pfR0CD7g3vh0hXOrQpZhAtlYPZwQFxhk_bJO_xHu-ISjQ/viewform" target="_blank">
           <ButtonBasic width="l" height="l" font="jost">
             CONTACT
           </ButtonBasic>

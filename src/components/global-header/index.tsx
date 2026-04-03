@@ -63,7 +63,7 @@ export default function GlobalHeader() {
             UPDATE
           </a>
           <a
-            href="https://www.notion.so/tactoinc/RECRUIT-10df77f5f0528050ab38c6b4a262d406?pvs=4"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf24pfR0CD7g3vh0hXOrQpZhAtlYPZwQFxhk_bJO_xHu-ISjQ/viewform"
             target="_blank"
             onMouseLeave={changeColor}
           >
@@ -71,7 +71,7 @@ export default function GlobalHeader() {
             <SvgExternal />
           </a>
           <a
-            href="https://forms.gle/7MxHsRn53g18HVuo6"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf24pfR0CD7g3vh0hXOrQpZhAtlYPZwQFxhk_bJO_xHu-ISjQ/viewform"
             target="_blank"
             onMouseLeave={changeColor}
           >
