@@ -13,8 +13,8 @@ export default function ContentHero() {
         <img src="/images/hero/txt_statement.svg" alt="" />
 
         <div className={styles.button}>
-          <a href="https://forms.gle/C2KLLjGhTVvxS1mc9" target="_blank">
-            <ButtonBasic height="hero">資料ダウンロード</ButtonBasic>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf24pfR0CD7g3vh0hXOrQpZhAtlYPZwQFxhk_bJO_xHu-ISjQ/viewform" target="_blank">
+            <ButtonBasic height="hero">CONTACT</ButtonBasic>
           </a>
         </div>
       </div>

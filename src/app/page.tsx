@@ -25,21 +25,21 @@ export default function Home() {
         <ContentAbout />
       </SectionContainer>
 
-      <SectionContainer>
+      {/* <SectionContainer>
         <ContentMethod />
-      </SectionContainer>
+      </SectionContainer> */}
 
-      <SectionContainer>
+      {/* <SectionContainer>
         <ContentSolution />
-      </SectionContainer>
+      </SectionContainer> */}
 
-      <SectionContainer>
+      {/* <SectionContainer>
         <ContentVoice />
-      </SectionContainer>
+      </SectionContainer> */}
 
-      <SectionContainer>
+      {/* <SectionContainer>
         <ContentUpdate updatesData={updatesData} />
-      </SectionContainer>
+      </SectionContainer> */}
 
       <SectionContainer>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf24pfR0CD7g3vh0hXOrQpZhAtlYPZwQFxhk_bJO_xHu-ISjQ/viewform" target="_blank">

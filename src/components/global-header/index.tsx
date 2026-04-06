@@ -17,7 +17,7 @@ export default function GlobalHeader() {
         </a>
       </div>
 
-      <button
+      {/* <button
         onClick={() => setIsNavOpen(!isNavOpen)}
         className={`${styles.menu_button} ${isNavOpen ? "is-open" : ""}`}
       >
@@ -78,7 +78,7 @@ export default function GlobalHeader() {
             CONTACT
           </a>
         </div>
-      </nav>
+      </nav> */}
     </header>
   );
 }
