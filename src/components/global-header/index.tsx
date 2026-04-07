@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import SvgExternal from "@/components/svg/external";
+// import { useState } from "react";
+// import SvgExternal from "@/components/svg/external";
 import styles from "./styles.module.scss";
-import { useRandomColor } from "@/stores/random-color";
+// import { useRandomColor } from "@/stores/random-color";
 
 export default function GlobalHeader() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const changeColor = useRandomColor((state) => state.changeColor);
+  // const [isNavOpen, setIsNavOpen] = useState(false);
+  // const changeColor = useRandomColor((state) => state.changeColor);
 
   return (
     <header className={styles.wrapper}>

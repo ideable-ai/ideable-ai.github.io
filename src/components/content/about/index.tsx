@@ -1,5 +1,5 @@
-import HeadingLv2 from "@/components/heading/lv2";
-import HeadingLv3 from "@/components/heading/lv3";
+// import HeadingLv2 from "@/components/heading/lv2";
+// import HeadingLv3 from "@/components/heading/lv3";
 
 import styles from "./styles.module.scss";
 
