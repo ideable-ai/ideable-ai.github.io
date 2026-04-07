@@ -36,7 +36,7 @@ export default function ContentMethod() {
         </span>
         <br />
         <span>
-          <span>アイデアブルは、人と、AIと、</span>
+          <span>ideableは、人と、AIと、</span>
           <br />
           <span>いっしょに手を動かしながら</span>
         </span>
@@ -55,11 +55,13 @@ export default function ContentMethod() {
       </p>
 
       <p className={styles.text}>
+        <br />
         <span>
           <span>私たちにできること</span>
         </span>
         <br />
       </p>
+      <br />
 
       <p className={`${styles.text} ${styles.small}`}>
         <span>
@@ -67,7 +69,6 @@ export default function ContentMethod() {
            <br />
            <span>限られた時間と人員でも、十分な選択肢を見て、</span>
         </span>
-        <br />
         <span>
           <span>納得して決められる進め方を提供します。</span>
         </span>
@@ -76,7 +77,6 @@ export default function ContentMethod() {
         <span>
           <span>AIを、組織の力にしたい。</span>
         </span>
-        <br />
         <span>
           <span>AI共創ワークショップ / AIエージェント設計 / </span>
           <br />
@@ -98,7 +98,6 @@ export default function ContentMethod() {
         <span>
           <span>考えながら、形にしたい。</span>
         </span>
-        <br />
         <span>
           <span>プロトタイプ開発 /  エクスペリエンスデザイン / </span>
            <br />
