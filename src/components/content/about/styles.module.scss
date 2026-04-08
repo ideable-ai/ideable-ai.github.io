@@ -77,3 +77,22 @@
     border-radius: 90px;
   }
 }
+
+// 2604 add style
+.text.small {
+  span.nbg{
+    line-height: 1.5;
+    display: block;
+    padding-top: 8px;
+    span{
+      background: transparent;
+      padding: 0px;
+    }
+
+    @include mixin.desktop {
+        background: transparent;
+        padding: 0px;
+        padding-top: 10px;
+      }
+  }
+}

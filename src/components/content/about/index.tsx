@@ -77,8 +77,8 @@ export default function ContentMethod() {
         <span>
           <span>AIを、組織の力にしたい。</span>
         </span>
-        <span>
-          <span>AI共創ワークショップ / AIエージェント設計 / </span>
+        <span className={styles.nbg}>
+          <span>→AI共創ワークショップ / AIエージェント設計 / </span>
           <br />
           <span>コンテクストエンジニアリング</span>
         </span>
