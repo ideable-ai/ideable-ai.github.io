@@ -83,34 +83,31 @@ export default function ContentMethod() {
           <span>コンテクストエンジニアリング</span>
         </span>
         <br />
-        <br />
         <span>
           <span>何をつくるべきか、決めたい。</span>
         </span>
         <br />
-        <span>
-          <span>新規事業・サービス構想 / ブランド戦略 / </span>
+        <span className={styles.nbg}>
+          <span>→新規事業・サービス構想 / ブランド戦略 / </span>
            <br />
           <span>コンセプト開発</span>
         </span>
         <br />
-        <br />
         <span>
           <span>考えながら、形にしたい。</span>
         </span>
-        <span>
-          <span>プロトタイプ開発 /  エクスペリエンスデザイン / </span>
+        <span className={styles.nbg}>
+          <span>→プロトタイプ開発 /  エクスペリエンスデザイン / </span>
            <br />
           <span>クリエイティブディレクション</span>
         </span>
-        <br />
         <br />
         <span>
           <span>なぜやるのかから、問い直したい。</span>
         </span>
         <br />
-        <span>
-          <span>パーパス策定 / MVV設計 / 組織ビジョン言語化</span>
+        <span className={styles.nbg}>
+          <span>→パーパス策定 / MVV設計 / 組織ビジョン言語化</span>
         </span>
       </p>
 
