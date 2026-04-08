@@ -81,9 +81,10 @@
 // 2604 add style
 .text.small {
   span.nbg{
-    line-height: 1.5;
+    line-height: 1.6;
     display: block;
     padding-top: 8px;
+    font-size: 13px;
     span{
       background: transparent;
       padding: 0px;
@@ -93,6 +94,7 @@
         background: transparent;
         padding: 0px;
         padding-top: 10px;
+        font-size: 20px;
       }
   }
 }
