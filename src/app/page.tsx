@@ -1,21 +1,21 @@
 import SectionContainer from "@/components/section-container";
 import ContentHero from "@/components/content/hero";
 import ContentAbout from "@/components/content/about";
-import ContentMethod from "@/components/content/method";
-import ContentSolution from "@/components/content/solution";
-import ContentVoice from "@/components/content/voice";
-import ContentUpdate, { type Props } from "@/components/content/update";
+// import ContentMethod from "@/components/content/method";
+// import ContentSolution from "@/components/content/solution";
+// import ContentVoice from "@/components/content/voice";
+// import ContentUpdate, { type Props } from "@/components/content/update";
 import ButtonBasic from "@/components/button/basic";
-import yaml from "js-yaml";
-import * as fs from "fs";
-import * as path from "path";
+// import yaml from "js-yaml";
+// import * as fs from "fs";
+// import * as path from "path";
 
 export default function Home() {
   // NOTE: updatesのみリリース後に手動更新があるとのことなので
   // 人間フレンドリーなyamlにしておいた
-  const updatesData = yaml.load(
-    fs.readFileSync(path.join(process.cwd(), "src/data/updates.yaml"), "utf8")
-  ) as Props["updatesData"];
+  // const updatesData = yaml.load(
+  //   fs.readFileSync(path.join(process.cwd(), "src/data/updates.yaml"), "utf8")
+  // ) as Props["updatesData"];
 
   return (
     <>
@@ -25,21 +25,21 @@ export default function Home() {
         <ContentAbout />
       </SectionContainer>
 
-      <SectionContainer>
+      {/* <SectionContainer>
         <ContentMethod />
-      </SectionContainer>
+      </SectionContainer> */}
 
-      <SectionContainer>
+      {/* <SectionContainer>
         <ContentSolution />
-      </SectionContainer>
+      </SectionContainer> */}
 
-      <SectionContainer>
+      {/* <SectionContainer>
         <ContentVoice />
-      </SectionContainer>
+      </SectionContainer> */}
 
-      <SectionContainer>
+      {/* <SectionContainer>
         <ContentUpdate updatesData={updatesData} />
-      </SectionContainer>
+      </SectionContainer> */}
 
       <SectionContainer>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf24pfR0CD7g3vh0hXOrQpZhAtlYPZwQFxhk_bJO_xHu-ISjQ/viewform" target="_blank">
